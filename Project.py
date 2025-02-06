@@ -3,24 +3,6 @@
 
 # COMMAND ----------
 
-
-
-# COMMAND ----------
-
-# MAGIC %sh
-# MAGIC git config --global user.name "Jeremy Jornet"
-# MAGIC git config --global user.email "jeremy.jornet@gmail.com"
-# MAGIC
-
-# COMMAND ----------
-
-# MAGIC %sh
-# MAGIC gh auth login --with-token < ton_personal_access_token
-# MAGIC gh repo create mon-depot-databricks --public
-# MAGIC
-
-# COMMAND ----------
-
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
