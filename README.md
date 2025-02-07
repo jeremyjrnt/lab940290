@@ -34,23 +34,14 @@
 Emphasizing the right core values are crucial in the business world, especially when applying for a job. It can be challenging to determine which values to emphasize, how to subtly convey them, establish a clear order of priorities, and recognize a company’s recruitment patterns. That's why we developed On Target, a  big data tool that aims to give it a solution. This system generates tailored guidelines that enable candidates to highlight the skills and values most valued by the specific company they are targeting using Statistical and Machine Learning methods.
 
 ## Implementing Methods
-•⁠  ⁠Data Preprocessing
-•⁠  ⁠Features Engineering
-•⁠  ⁠Pre-trained models from Hugging Face]
-•⁠  ⁠Statistical tests to significance inference
-•⁠  ⁠Machine Learning model to Model Interpretability
-•⁠  ⁠NLP keywords extraction techniques
-•⁠  ⁠LLM to generate instructions
+*⁠  ⁠Data Preprocessing
+*⁠  ⁠Features Engineering
+*⁠⁠  ⁠Pre-trained models from Hugging Face]
+*⁠  ⁠Statistical tests to significance inference
+*⁠  ⁠Machine Learning model to Model Interpretability
+*⁠  ⁠NLP keywords extraction techniques
+*⁠  ⁠LLM to generate instructions
 
-
----
-
-## Aims & Targets
-- **Accurate Profile Enhancement**: Guide candidates on which strengths to emphasize.
-- **Data-Driven Insights**: Provide statistically sound and interpretable feature importance.
-- **Scalable Big Data Approach**: Implement robust scraping and large-scale data processing.
-- **Customizability**: Adapt instructions for different company cultures and values.
-- **Practical Usability**: Provide straightforward notebooks for platforms like Databricks, with Hugging Face integration.
 
 ---
 
