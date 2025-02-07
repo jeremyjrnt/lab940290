@@ -70,24 +70,24 @@ Example Instruction:
 
 ## Running the On Target Notebook
 
-### Commented Parts
-•⁠  ⁠Some sections are commented out for *testing purposes, mainly to sample a small portion of datasets for **faster results*.
-•⁠  ⁠Other commented parts are *time-consuming* and *not critical* for our inferences.
-•⁠  ⁠*PART 5 – VERSION 2 (Word Embeddings Extension)* is not necessary as it did not yield satisfying results.
+- **Commented Parts**  
+  - Some sections are commented out for *testing purposes*, mainly to sample a small portion of datasets for **faster results**.  
+  - Other commented parts are *time-consuming* and *not critical* for our inferences.  
+  - **PART 5 – VERSION 2 (Word Embeddings Extension)** is not necessary as it did not yield satisfying results.
 
-### Databricks & DBFS Usage
-•⁠  ⁠We *write engineered datasets* in *DBFS (Databricks File System)* to avoid re-running code each time.
-•⁠  ⁠These datasets *cannot be uploaded here*.
-•⁠  ⁠*DBFS write and load cells can be ignored*, as they are inaccessible without our environment.
+- **Databricks & DBFS Usage**  
+  - We *write engineered datasets* in **DBFS (Databricks File System)** to avoid re-running code each time.  
+  - These datasets **cannot be uploaded here**.  
+  - **DBFS write and load cells can be ignored**, as they are inaccessible without our environment.
 
-### Hugging Face API Requirements
-•⁠  ⁠The code uses *Hugging Face API* to deploy *pretrained models*.
-•⁠  ⁠You must *log in with your own valid personal token*.
-•⁠  ⁠Any token appearing in the notebook has already been *disabled*.
+- **Hugging Face API Requirements**  
+  - The code uses *Hugging Face API* to deploy **pretrained models**.  
+  - You must *log in with your own valid personal token*.  
+  - Any token appearing in the notebook has already been *disabled*.
 
-### Support & Questions
-•⁠  ⁠If you encounter *any issues running the notebook, feel free to **contact us*.
-•⁠  ⁠We’ll be *glad to help*! 🎯
+- **Support & Questions**  
+  - If you encounter *any issues running the notebook*, feel free to **contact us**.  
+  - We’ll be *glad to help*! 🎯
 
 ---
 
