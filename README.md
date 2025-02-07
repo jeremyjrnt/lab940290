@@ -37,7 +37,7 @@ First impressions and emphasizing the right qualities are crucial in the busines
 ## On Target Tool
 You can find here the main notebook with all our work. 
 
-Here, we were able to learn the key values for each company, the inherent values of each profile, and understand their leel of importance for each feature. Finally, the system generates the instructions the candidates has to follow to enhance his profil towards a specific company that he targeted.
+Here, we were able to learn the key values for each company, the inherent values of each profile, and understand their level of importance for each feature. Finally, the system generates the instructions the candidates has to follow to enhance his profil towards a specific company that he targeted.
 
 ### Running the code
 Same as "Running the Code" section in the "Model Interpretability" section.
@@ -54,12 +54,15 @@ Before you begin, make sure the following prerequisites are met:
 * _Databricks Cluster_: A cluster must be configured and started before running the code.
 
 Then, start the cluster and run the code. You may need access to datasets that we could not upload here. 
+To create the model interpretability file, the code relies on a table called "patterns_df" that is stored in our DBFS. To run the code, you have to find a way to import the table named "patterns_df" into the main notebook On_Target.ipynb.
 
 ## Scraping 
 This file is about the scraping methods we used to scrape the relevant data from the companies' websites and from Comparably. For the scraping mission, we used the BrightData application that allows us to do high-scaling scraping without being blocked. 
 
 ### Running the code
-Before you begin, make sure you have a BrightData account. Copy paste the following lines of codes by replacing "username" and "password" by your own username password.
+Before you begin, make sure you have a BrightData account. 
+Install all the dependencies thanks to the requirements files according to the chosen scraping task.
+Copy paste the following lines of codes by replacing "username" and "password" by your own username password.
 
 ``` 
 AUTH = 'username:password'
