@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Technion_logo.svg" alt="Technion Logo" height="100">
   <br>
-  On Target: Emphasize Your Best Qualities
+  On Target
 </h1>
 
 <p align="center">
