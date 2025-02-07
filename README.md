@@ -14,7 +14,6 @@ Technion - Israel Institute of Technology - Faculty of Data Science and Decision
 * Final Project Report
 * Model Interpretability
     * Model Interpretability Notebook
-    * Model Interpretability Results
 * On Target tool
     * On Target Notebook
     * Example generated instructions
@@ -35,17 +34,6 @@ First impressions and emphasizing the right qualities are crucial in the busines
 * NLP keywords extraction techniques
 * LLM to generate instructions
 
-## Model Interpretability
-The model interpretability notebook gives information about the importance of the features in the recruitment process by training for each company a Random Forest model for a binary classification task.
-
-### Running the code
-Before you begin, make sure the following prerequisites are met:
-
-* _Databricks Account_: A Databricks account is required to run this project.
-* _Databricks Cluster_: A cluster must be configured and started before running the code.
-
-Then, start the cluster and run the code. The file "Model Interpretability Results" provides the decreasing ordered list of the importance of each feature.
-
 ## On Target Tool
 You can find here the main notebook with all our work. 
 
@@ -55,6 +43,17 @@ Here, we were able to learn the key values for each company, the inherent values
 Same as "Running the Code" section in the "Model Interpretability" section.
 
 Then, each user enters his employee ID and the company's name that he targets. The system outputs the instructions. The file "Example generated instructions" provides a great example of the format of the instructions. 
+
+## Model Interpretability
+The model interpretability notebook gives information about the importance of the features in the recruitment process by training for each company a Random Forest model for a binary classification task.
+
+### Running the code
+Before you begin, make sure the following prerequisites are met:
+
+* _Databricks Account_: A Databricks account is required to run this project.
+* _Databricks Cluster_: A cluster must be configured and started before running the code.
+
+Then, start the cluster and run the code. You may need access to datasets that we could not upload here. 
 
 ## Scraping 
 This file is about the scraping methods we used to scrape the relevant data from the companies' websites and from Comparably. For the scraping mission, we used the BrightData application that allows us to do high-scaling scraping without being blocked. 
