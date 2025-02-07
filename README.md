@@ -28,7 +28,7 @@ First impressions and emphasizing the right qualities are crucial in the busines
 ## Implementing Methods
 * Data Preprocessing
 * Features Engineering
-* Pre-trained models from Hugging Face]
+* Pre-trained models from Hugging Face
 * Statistical tests to significance inference
 * Machine Learning model to Model Interpretability
 * NLP keywords extraction techniques
@@ -37,26 +37,26 @@ First impressions and emphasizing the right qualities are crucial in the busines
 ## On Target Tool
 You can find here the main notebook with all our work. 
 
-Here, we were able to learn the key values for each company, the inherent values of each profile, and understand their leel of importance for each feature. Finally, the system generates the instructions the candidates has to follow to enhance his profil towards a specific company that he targeted.
+Here, we were able to learn the key values for each company, the inherent values of each profile, and understand their level of importance for each feature. Finally, the system generates the instructions the candidates has to follow to enhance his profil towards a specific company that he targeted.
 
-## Running the Code
+### Running the Code
 
-### Commented Parts
+#### Commented Parts
 - Some sections are commented out for **testing purposes**, mainly to sample a small portion of datasets for **faster results**.
 - Other commented parts are **time-consuming** and **not critical** for our inferences.
 - **PART 5 – VERSION 2 (Word Embeddings Extension)** is not necessary as it did not yield satisfying results.
 
-### Databricks & DBFS Usage
+#### Databricks & DBFS Usage
 - We **write engineered datasets** in **DBFS (Databricks File System)** to avoid re-running code each time.
 - These datasets **cannot be uploaded here**.
 - **DBFS write and load cells can be ignored**, as they are inaccessible without our environment.
 
-### Hugging Face API Requirements
+#### Hugging Face API Requirements
 - The code uses **Hugging Face API** to deploy **pretrained models**.
 - You must **log in with your own valid personal token**.
 - Any token appearing in the notebook has already been **disabled**.
 
-### Support & Questions
+#### Support & Questions
 - If you encounter **any issues running the notebook**, feel free to **contact us**.
 - We’ll be **glad to help**! 🎯
 
