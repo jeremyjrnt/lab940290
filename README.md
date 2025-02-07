@@ -98,8 +98,8 @@ The **Model Interpretability Notebook**:
 
 Make sure the following prerequisites are met:
 
-•⁠  ⁠Databricks Account: A Databricks account is required to run this project.
-•⁠  ⁠Databricks Cluster: A cluster must be configured and started before running the code.
+- **Databricks Account**: A Databricks account is required to run this project.  
+- **Databricks Cluster**: A cluster must be configured and started before running the code.
 
 Then, start the cluster and run the code.
 
