@@ -1,6 +1,6 @@
 # Data Management & Collection Lab - On Target 
 
-## Not to lie, but to emphasize
+## Not to Lie, but to Emphasize
 
 ### Jornet Jeremy - Sasson Eden - Bijaoui Tom
 
