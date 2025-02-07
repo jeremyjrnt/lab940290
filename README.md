@@ -11,7 +11,6 @@ Technion - Israel Institute of Technology - Faculty of Data Science and Decision
 
 ## Project's Files
 
-* Final Project Report
 * Model Interpretability
     * Model Interpretability Notebook
 * On Target tool
