@@ -10,15 +10,11 @@ from pyspark.ml.feature import VectorAssembler
 
 spark = SparkSession.builder.getOrCreate()
 
-# COMMAND ----------
-
 companies = spark.read.parquet('/dbfs/linkedin_train_data')
 companies.display()
 
 profiles = spark.read.parquet('/dbfs/linkedin_people_train_data')
 profiles.display()
-
-# COMMAND ----------
 
 input_path = "dbfs:/FileStore/patterns_df_ejt"
 patterns_df = spark.read.parquet(input_path)
@@ -26,23 +22,13 @@ patterns_df = patterns_df.orderBy(col('company_name').asc(), col('employee_id').
 
 patterns_df.display()
 
-# COMMAND ----------
-
-"""Creation of the dataset for each company"""
-
-input_path = "dbfs:/FileStore/patterns_df_ejt"
-patterns_df = spark.read.parquet(input_path)
-patterns_df = patterns_df.orderBy(col('employee_id').asc(), col('company_name').asc())
-
-
 """Creation of the positive samples"""
+
 train_dataset_positive_labels_df = patterns_df.select('company_name', 'employee_id', 'top_university', 'degree', 'volunteering', 'average_months_of_experience', 'company_and_organization_types')
 train_dataset_positive_labels_df = train_dataset_positive_labels_df.withColumn('label', lit(1))
 train_dataset_positive_labels_df = train_dataset_positive_labels_df.orderBy(col('company_name').asc(), col('employee_id').asc())
 
 train_dataset_positive_labels_df.display()
-
-# COMMAND ----------
 
 """Creation of the negative samples"""
 
@@ -55,23 +41,10 @@ train_dataset_negative_labels_df = train_dataset_negative_labels_df.subtract(tra
 train_dataset_negative_labels_df = train_dataset_negative_labels_df.withColumn('label', lit(0)).withColumnRenamed('company_name', 'negative_company_name')
 
 train_dataset_negative_labels_df = train_dataset_negative_labels_df.join(patterns_df, on=['employee_id'], how='left').select('negative_company_name', 'employee_id', 'top_university', 'degree', 'volunteering', 'average_months_of_experience', 'company_and_organization_types', 'label').orderBy(col('negative_company_name').asc(), col('employee_id').asc())
-
-train_dataset_negative_labels_df.display()
-
-# COMMAND ----------
-
 train_positive_sample_size = train_dataset_positive_labels_df.groupBy("company_name").agg(count("*").alias("sample_size")).select('company_name', 'sample_size')
-
-train_positive_sample_size.display()
-
-# COMMAND ----------
 
 train_negative_labels_with_company_name = train_dataset_negative_labels_df.crossJoin(train_positive_sample_size)
 train_negative_labels_with_company_name = train_negative_labels_with_company_name.filter(col('negative_company_name') == col('company_name'))
-
-train_negative_labels_with_company_name.display()
-
-# COMMAND ----------
 
 train_negative_with_random = train_negative_labels_with_company_name.withColumn("random_val", F.rand())
 window = Window.partitionBy("company_name").orderBy("random_val")
@@ -81,15 +54,12 @@ train_negative_samples_by_company = train_negative_samples_by_company.drop("row_
 
 train_negative_samples_by_company.display()
 
-# COMMAND ----------
-
 train_negative_samples_by_company.drop('negative_company_name', 'sample_size')
 train_negative_samples_by_company = train_negative_samples_by_company.select(train_dataset_positive_labels_df.columns)
 train_df = train_dataset_positive_labels_df.union(train_negative_samples_by_company).orderBy(col('company_name').asc(), col('employee_id').asc())
 
 train_df.display()
 
-# COMMAND ----------
 
 """Preprocessing of the features of the employees"""
 
@@ -122,8 +92,6 @@ def organization_types2string(organization_types):
 
     return organization_types_string    
 
-# COMMAND ----------
-
 degree2features_udf = udf(degree2feature, IntegerType())
 organization_types_2string_udf = udf(organization_types2string, StringType())
 
@@ -135,8 +103,6 @@ train_df = indexer.fit(train_df).transform(train_df)
 train_df = train_df.drop('organization_types', 'employee_id', 'degree', 'company_and_organization_types')
 
 train_df.display()
-
-# COMMAND ----------
 
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler
